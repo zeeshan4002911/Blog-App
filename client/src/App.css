@@ -39,3 +39,22 @@ body {
     color: red;
     margin-bottom: .5rem;
 }
+
+nav ul {
+    float: right;
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 .5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
