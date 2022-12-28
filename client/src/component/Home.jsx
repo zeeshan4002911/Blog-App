@@ -29,13 +29,13 @@ const Home = () => {
         <div className="box-container" style={{ width: "80vw", margin: "0 auto" }}>
             <nav>
                 <ul>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/">CREATE</Link></li>
+                    <li><Link to="/home">HOME</Link></li>
+                    <li><Link to="/create">CREATE</Link></li>
                     <li><Link to="/">LOGOUT</Link></li>
                 </ul>
                 <h1 onClick={() => navigate("/")} style={{ cursor: "pointer" }}>BlogApp</h1>
             </nav>
-            
+
 
 
         </div>
