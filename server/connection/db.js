@@ -3,7 +3,7 @@ mongoose.set('strictQuery', false);
 const dotenv = require("dotenv");
 dotenv.config();
 
-const URL = process.env.DATABASE_URL || "mongodb://localhost:27017/blogapp";
+const URL = process.env.DATABASE_URL || "mongodb://localhost:27017/Blog-App";
 
 async function connection() {
     await mongoose.connect(URL, { useUnifiedTopology: true, useNewUrlParser: true })

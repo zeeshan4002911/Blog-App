@@ -22,8 +22,8 @@ const Login = () => {
                 setResponse(data.message)
             } else if (data.status === "Success") {
                 setResponse(data.message);
-                window.localStorage.setItem("token", data.token);
-                setTimeout(() => { navigate("/")}, 1000);
+                window.localStorage.setItem("token_blog_app", data.token);
+                setTimeout(() => { navigate("/home")}, 1000);
             }
         })).catch((err) => setResponse(err.message))
     }

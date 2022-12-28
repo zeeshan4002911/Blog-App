@@ -3,7 +3,7 @@ const Blog = require("../model/blog.js");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const path = require("path");
-const multer  = require('multer')
+const multer = require('multer')
 const HASH_KEY = process.env.HASH_KEY || "zeesh1234@";
 
 // Middleware for token authentication
@@ -27,7 +27,7 @@ const tokenAuth = (req, res, next) => {
     } catch (err) {
         res.status(500).json({
             status: "Failed",
-            message: "Internal Server Error"+ err.message
+            message: "Internal Server Error" + err.message
         })
     }
 }
@@ -82,6 +82,7 @@ route.get("/", async (req, res) => {
                 message: err.message
             })
             res.status(200).json({
+                status: "Success",
                 data: data
             })
         })
