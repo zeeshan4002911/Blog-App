@@ -5,6 +5,6 @@ const blogSchema = new mongoose.Schema({
     description: String,
     image: String,
     email: String
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model("blog", blogSchema);

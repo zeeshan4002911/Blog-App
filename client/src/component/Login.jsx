@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 const URL = process.env.REACT_APP_API_KEY || "http://localhost:3001"
 
@@ -27,6 +27,9 @@ const Login = () => {
             }
         })).catch((err) => setResponse(err.message))
     }
+    useEffect(() => {
+        window.localStorage.removeItem("token_blog_app");
+    }, [])
     return (
         <div className="box-container">
             <h1>LOGIN</h1>
