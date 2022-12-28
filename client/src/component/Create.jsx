@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const URL = process.env.REACT_APP_API_KEY || "http://localhost:3001";
 
 export default function Create() {
     const navigate = useNavigate();
+    useEffect(() => {
+        if (!window.localStorage.getItem("token_blog_app")) {
+         return navigate("/");
+        };
+     }, [])
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

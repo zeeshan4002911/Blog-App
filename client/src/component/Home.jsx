@@ -8,6 +8,11 @@ const Home = () => {
     const navigate = useNavigate();
     const [fetchedBlog, setFetchedBlog] = useState([]);
     useEffect(() => {
+       if (!window.localStorage.getItem("token_blog_app")) {
+        return navigate("/");
+       };
+    }, [])
+    useEffect(() => {
         const token = window.localStorage.getItem("token_blog_app");
         fetch(URL + "/api/v1/blog/", {
             method: "GET",
